@@ -4,6 +4,7 @@
 
 *[San Francisco Park Reading by Juan Salamanca](https://www.pexels.com/photo/park-san-francisco-reading-61109/) | [Free License](https://www.pexels.com/photo-license/)*
 
+# Rental_analysis
 ## Background
 
 Harold's company has just started a new Real Estate Investment division to provide customers with a broader range of portfolio options. Harold was tasked with building a prototype dashboard and he needs your help. The real estate team wants to trial this initial offering with investment opportunities for the San Francisco market. If the new service is popular, then they can start to expand to other markets.
@@ -11,6 +12,7 @@ Harold's company has just started a new Real Estate Investment division to provi
 The goal of this dashboard is to provide charts, maps, and interactive visualizations that help customers explore the data and determine if they want to invest in rental properties in San Francisco.
 
 In this homework assignment, you will help Harold accomplish the following tasks:
+In this assignment, you will help Harold accomplish the following tasks:
 
 1. [Complete a notebook of rental analysis](#Rental-Analysis).
 
@@ -64,20 +66,9 @@ In this section, you want to determine the average sales price per year and the 
 
 In this section, you will use hvplot to create two interactive visulizations of average prices with a dropdown selector for the neighborhood. The first visualization will be a line plot showing the trend of average price per square foot over time for each neighborhood.  The second will be a line plot showing the trend of average montly rent over time for each neighborhood.
 
-**Hint:** It will be easier to create a new DataFrame from grouping the data and calculating the mean prices for each year and neighborhood.
-
-  ![avg-price-neighborhood.png](Images/avg-price-neighborhood.png)
-  
-  ![gross-rent-neighborhood.png](Images/gross-rent-neighborhood.png)
-
-
 #### Top 10 Most Expensive Neighborhoods
 
 In this section, you want to figure out which neighborhoods are the most expensive. You will need to calculate the mean sale price for each neighborhood and then sort the values to obtain the top 10 most expensive neighborhoods on average. Plot the results as a bar chart.
-
-  ![top-10-expensive-neighborhoods.png](Images/top-10-expensive-neighborhoods.png)
-
-
 #### Comparing Cost to Purchase Versus Rental Income
 
 In this section, you will use `hvplot` to create an interactive visualization with a dropdown selector for the neighborhood. This visualization will feature a side-by-side comparison of average price per square foot versus average monthly rent by year.
@@ -225,3 +216,8 @@ Sample Dashboard:
 ---
 
 © 2021 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+  
+### Dashboard Solution
+
+From the rental analysis, I created the Panel library to build an interactive dashboard for all of the visualizations. I imported the necessary csv files (neighboorhood coordinates and sfo neighborhood census data) to the dashboard preparation. In order to create the maps visualization using Plotly Express, I ran the mapbox access token. For each visualization, I created a function to make it more efficient in building and modifying the layout. After creating functions for each plot, I created a panel dashboard by combining all the plots into a single dashboard view using the plot functions. I created a title for the dashboard using Panel Columns, and a tab layout using Panel tabs.
+
